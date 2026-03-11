@@ -1,0 +1,605 @@
+/* ==UserStyle==
+@name           Gruvbox Dark Medium - Gruvhub Dark
+@namespace      https://github.com/migueltfd/gruvhub-dark
+@version        1.0.0
+@description    Modified Gruvbox Dark Medium Theme for GitHub
+@author         Mikl Wolfe (original), MiguelTFD (modifications)
+@license        MIT
+@homepageURL    https://github.com/migueltfd/gruvhub-dark
+@supportURL     https://github.com/migueltfd/gruvhub-dark/issues
+@preprocessor   default
+==/UserStyle== */
+
+/*
+Based on:
+https://github.com/chiefmikey/tomorrow-night-darkly
+Copyright (c) Mikl Wolfe
+
+Modifications:
+https://github.com/migueltfd/gruvhub-dark
+Copyright (c) 2026 MiguelTFD
+*/
+
+/*
+  Gruvbox Dark Medium palette reference:
+  bg0:       #282828  (main background)
+  bg1:       #3c3836  (muted/inset background)
+  bg2:       #504945  (emphasis background)
+  bg3:       #665c54  (border emphasis)
+  bg4:       #7c6f64  (muted foreground)
+  fg0:       #fbf1c7  (brightest foreground)
+  fg1:       #ebdbb2  (default foreground / accent main)
+  fg2:       #d5c4a1  (secondary foreground)
+  fg3:       #bdae93  (muted foreground)
+  fg4:       #a89984  (disabled / subtle foreground)
+  red:       #cc241d  / bright: #fb4934
+  green:     #98971a  / bright: #b8bb26
+  yellow:    #d79921  / bright: #fabd2f
+  blue:      #458588  / bright: #83a598
+  purple:    #b16286  / bright: #d3869b
+  aqua:      #689d6a  / bright: #8ec07c
+  orange:    #d65d0e  / bright: #fe8019
+  gray:      #928374
+*/
+
+@-moz-document domain("github.com") {
+  :root {
+    --accent-main: #ebdbb2 !important;
+    --accent-secondary: #d5c4a1 !important;
+    --accent-disabled: rgb(255 255 255 / 10%) !important;
+    --accent-border: rgb(255 255 255 / 10%) !important;
+    --bg-main: #282828 !important;
+    --accent-transparent: transparent !important;
+    --drawer-background-fade: rgb(0 0 0 / 60%) !important;
+    --bgColor-default: #282828 !important;
+    --bgColor-muted: #1d2021 !important;
+    --bgColor-inset: #282828 !important;
+    --bgColor-emphasis: #3c3836 !important;
+    --bgColor-inverse: #d5c4a1 !important;
+    --bgColor-disabled: #282828 !important;
+    --bgColor-transparent: transparent !important;
+    --bgColor-black: #1d2021 !important;
+    --bgColor-white: #d5c4a1 !important;
+    --bgColor-accent-emphasis: #b16286 !important;
+    --bgColor-accent-muted: #3c3836 !important;
+    --bgColor-neutral-emphasis: #3c3836 !important;
+    --bgColor-neutral-muted: #3c3836 !important;
+    --bgColor-attention-emphasis: #d79921 !important;
+    --bgColor-attention-muted: #d7992126 !important;
+    --bgColor-danger-emphasis: #cc241d !important;
+    --bgColor-danger-muted: #fb49341a !important;
+    --bgColor-success-emphasis: #98971a !important;
+    --bgColor-success-muted: #b8bb2626 !important;
+    --bgColor-severe-emphasis: #d65d0e !important;
+    --bgColor-severe-muted: #fe80191a !important;
+    --bgColor-done-emphasis: #458588 !important;
+    --bgColor-done-muted: #83a59826 !important;
+    --bgColor-sponsors-emphasis: #b16286 !important;
+    --bgColor-sponsors-muted: #d3869b1a !important;
+    --bgColor-open-emphasis: var(--bgColor-success-emphasis) !important;
+    --bgColor-open-muted: var(--bgColor-success-muted) !important;
+    --bgColor-closed-emphasis: var(--bgColor-danger-emphasis) !important;
+    --bgColor-closed-muted: var(--bgColor-danger-muted) !important;
+    --bgColor-draft-emphasis: var(--bgColor-neutral-emphasis) !important;
+    --bgColor-draft-muted: var(--bgColor-neutral-muted) !important;
+    --bgColor-upsell-emphasis: var(--bgColor-done-emphasis) !important;
+    --bgColor-upsell-muted: var(--bgColor-done-muted) !important;
+    --fgColor-default: #ebdbb2 !important;
+    --fgColor-muted: #928374 !important;
+    --fgColor-onEmphasis: #ebdbb2 !important;
+    --fgColor-link: #d3869b !important;
+    --fgColor-accent: #ebdbb2 !important;
+    --fgColor-disabled: rgb(255 255 255 / 10%) !important;
+    --fgColor-white: #ebdbb2 !important;
+    --fgColor-black: #282828 !important;
+    --fgColor-neutral: #928374 !important;
+    --fgColor-onInverse: #282828 !important;
+    --fgColor-success: #b8bb26 !important;
+    --fgColor-attention: #fabd2f !important;
+    --fgColor-severe: #fe8019 !important;
+    --fgColor-danger: #fb4934 !important;
+    --fgColor-done: #83a598 !important;
+    --fgColor-sponsors: #d3869b !important;
+    --fgColor-open: var(--fgColor-success) !important;
+    --fgColor-closed: var(--fgColor-danger) !important;
+    --fgColor-draft: var(--fgColor-neutral) !important;
+    --fgColor-upsell: var(--fgColor-done) !important;
+    --borderColor-default: #3c3836 !important;
+    --borderColor-muted: #3c3836 !important;
+    --borderColor-emphasis: #7c6f64 !important;
+    --borderColor-translucent: rgb(255 255 255 / 10%) !important;
+    --borderColor-accent-emphasis: #d3869b !important;
+    --borderColor-accent-muted: #282828 !important;
+    --borderColor-neutral-emphasis: #7c6f64 !important;
+    --borderColor-neutral-muted: var(--borderColor-default) !important;
+    --borderColor-attention-emphasis: #d79921 !important;
+    --borderColor-attention-muted: #d7992166 !important;
+    --borderColor-danger-emphasis: #cc241d !important;
+    --borderColor-danger-muted: #fb493466 !important;
+    --borderColor-success-emphasis: #98971a !important;
+    --borderColor-success-muted: #b8bb2666 !important;
+    --borderColor-severe-emphasis: #d65d0e !important;
+    --borderColor-severe-muted: #fe801966 !important;
+    --borderColor-done-emphasis: #458588 !important;
+    --borderColor-done-muted: #83a59866 !important;
+    --borderColor-sponsors-emphasis: #b16286 !important;
+    --borderColor-sponsors-muted: #d3869b66 !important;
+    --borderColor-open-emphasis: var(--borderColor-success-emphasis) !important;
+    --borderColor-open-muted: var(--borderColor-success-muted) !important;
+    --borderColor-closed-emphasis: var(--borderColor-danger-emphasis) !important;
+    --borderColor-closed-muted: var(--borderColor-danger-muted) !important;
+    --borderColor-draft-emphasis: var(--borderColor-emphasis) !important;
+    --borderColor-draft-muted: var(--borderColor-muted) !important;
+    --borderColor-upsell-emphasis: var(--borderColor-done-emphasis) !important;
+    --borderColor-upsell-muted: var(--borderColor-done-muted) !important;
+    --border-default: 0.0625rem solid #3c3836 !important;
+    --border-muted: 0.0625rem solid #3c3836 !important;
+    --border-accent-emphasis: 0.0625rem solid #d3869b !important;
+    --border-accent-muted: 0.0625rem solid #282828 !important;
+    --border-neutral-emphasis: 0.0625rem solid var(--borderColor-neutral-emphasis) !important;
+    --border-attention-emphasis: 0.0625rem solid #d79921 !important;
+    --border-attention-muted: 0.0625rem solid #d7992166 !important;
+    --border-danger-emphasis: 0.0625rem solid #cc241d !important;
+    --border-danger-muted: 0.0625rem solid #fb493466 !important;
+    --border-success-emphasis: 0.0625rem solid #98971a !important;
+    --border-success-muted: 0.0625rem solid #b8bb2666 !important;
+    --border-severe-emphasis: 0.0625rem solid #d65d0e !important;
+    --border-severe-muted: 0.0625rem solid #fe801966 !important;
+    --border-done-emphasis: 0.0625rem solid #458588 !important;
+    --border-done-muted: 0.0625rem solid #83a59866 !important;
+    --border-sponsors-emphasis: 0.0625rem solid #b16286 !important;
+    --border-sponsors-muted: 0.0625rem solid #d3869b66 !important;
+    --border-open-emphasis: var(--border-success-emphasis) !important;
+    --border-open-muted: var(--border-success-muted) !important;
+    --border-closed-emphasis: var(--border-danger-emphasis) !important;
+    --border-closed-muted: var(--border-danger-muted) !important;
+    --border-draft-emphasis: 0.0625rem solid var(--borderColor-emphasis) !important;
+    --border-draft-muted: 0.0625rem solid var(--borderColor-muted) !important;
+    --border-upsell-emphasis: var(--border-done-emphasis) !important;
+    --border-upsell-muted: var(--border-done-muted) !important;
+    --shadow-resting-xsmall: 0px 1px 0px 0px #00000066 !important;
+    --shadow-resting-small: 0px 1px 0px 0px #00000066 !important;
+    --shadow-resting-medium: 0px 1px 0px 0px #00000066 !important;
+    --shadow-floating-small: 0px 0px 0px 1px #3c3836, 0px 6px 12px -3px #00000066, 0px 6px 18px 0px #00000066 !important;
+    --shadow-floating-medium: 0px 0px 0px 1px #3c3836, 0px 8px 16px -4px #00000066, 0px 4px 32px -4px #00000066, 0px 24px 48px -12px #00000066, 0px 48px 96px -24px #00000066 !important;
+    --shadow-floating-large: 0px 0px 0px 1px #3c3836, 0px 12px 28px -4px #00000066, 0px 8px 48px -8px #00000066, 0px 32px 64px -16px #00000066, 0px 64px 128px -32px #00000066 !important;
+    --shadow-floating-xlarge: 0px 0px 0px 1px #3c3836, 0px 16px 32px -4px #00000066, 0px 12px 56px -8px #00000066, 0px 40px 80px -16px #00000066, 0px 80px 160px -40px #00000066 !important;
+    --shadow-inset: inset 0px 1px 0px 0px #0000001a !important;
+    --shadow-highlight: inset 0px 1px 0px 0px #ffffff0d !important;
+    --button-default-bgColor-rest: #282828 !important;
+    --button-default-bgColor-hover: #3c3836 !important;
+    --button-default-bgColor-active: #3c3836 !important;
+    --button-default-bgColor-selected: #3c3836 !important;
+    --button-default-bgColor-disabled: #282828 !important;
+    --button-default-fgColor-rest: #ebdbb2 !important;
+    --button-default-fgColor-disabled: rgb(255 255 255 / 10%) !important;
+    --button-default-borderColor-rest: #3c3836 !important;
+    --button-default-borderColor-hover: #3c3836 !important;
+    --button-default-borderColor-active: #3c3836 !important;
+    --button-default-borderColor-disabled: #3c3836 !important;
+    --button-default-shadow-resting: 0px 0px 0px 0px #000, 0px 0px 0px 0px #000 !important;
+    --button-primary-bgColor-rest: #282828 !important;
+    --button-primary-bgColor-hover: #282828 !important;
+    --button-primary-bgColor-active: #3c3836 !important;
+    --button-primary-bgColor-disabled: #3c3836 !important;
+    --button-primary-fgColor-rest: #d3869b !important;
+    --button-primary-fgColor-disabled: rgb(255 255 255 / 10%) !important;
+    --button-primary-iconColor-rest: #d3869b !important;
+    --button-primary-borderColor-rest: #3c3836 !important;
+    --button-primary-borderColor-hover: #d3869b !important;
+    --button-primary-borderColor-active: #d3869b !important;
+    --button-primary-borderColor-disabled: #3c3836 !important;
+    --button-primary-shadow-selected: 0px 0px 0px 0px #000 !important;
+    --button-outline-bgColor-rest: var(--control-bgColor-rest) !important;
+    --button-outline-bgColor-hover: var(--bgColor-accent-emphasis) !important;
+    --button-outline-bgColor-active: #3c3836 !important;
+    --button-outline-bgColor-disabled: var(--control-bgColor-disabled) !important;
+    --button-outline-fgColor-rest: #d3869b !important;
+    --button-outline-fgColor-hover: var(--fgColor-onEmphasis) !important;
+    --button-outline-fgColor-active: var(--fgColor-onEmphasis) !important;
+    --button-outline-fgColor-disabled: var(--fgColor-disabled) !important;
+    --button-outline-borderColor-rest: var(--control-borderColor-rest) !important;
+    --button-outline-borderColor-hover: var(--button-primary-borderColor-hover) !important;
+    --button-outline-borderColor-active: var(--button-primary-borderColor-active) !important;
+    --button-outline-borderColor-disabled: var(--control-borderColor-disabled) !important;
+    --button-outline-iconColor-rest: #d3869b !important;
+    --button-outline-iconColor-hover: var(--fgColor-onEmphasis) !important;
+    --button-outline-shadow-selected: 0px 0px 0px 0px #000 !important;
+    --button-danger-bgColor-rest: var(--control-bgColor-rest) !important;
+    --button-danger-bgColor-hover: #cc241d !important;
+    --button-danger-bgColor-active: #9d0006 !important;
+    --button-danger-bgColor-disabled: var(--control-bgColor-disabled) !important;
+    --button-danger-fgColor-rest: var(--fgColor-danger) !important;
+    --button-danger-fgColor-hover: var(--fgColor-onEmphasis) !important;
+    --button-danger-fgColor-active: var(--fgColor-onEmphasis) !important;
+    --button-danger-fgColor-disabled: var(--fgColor-disabled) !important;
+    --button-danger-borderColor-rest: var(--control-borderColor-rest) !important;
+    --button-danger-borderColor-hover: var(--borderColor-danger-emphasis) !important;
+    --button-danger-borderColor-active: var(--borderColor-danger-emphasis) !important;
+    --button-danger-borderColor-disabled: var(--control-borderColor-disabled) !important;
+    --button-danger-iconColor-rest: var(--fgColor-danger) !important;
+    --button-danger-iconColor-hover: var(--fgColor-onEmphasis) !important;
+    --button-danger-shadow-selected: 0px 0px 0px 0px #000 !important;
+    --button-invisible-bgColor-rest: transparent !important;
+    --button-invisible-bgColor-hover: var(--control-transparent-bgColor-hover) !important;
+    --button-invisible-bgColor-active: var(--control-transparent-bgColor-active) !important;
+    --button-invisible-bgColor-disabled: var(--control-bgColor-disabled) !important;
+    --button-invisible-fgColor-rest: #d3869b !important;
+    --button-invisible-fgColor-hover: var(--fgColor-default) !important;
+    --button-invisible-fgColor-active: var(--fgColor-default) !important;
+    --button-invisible-fgColor-disabled: var(--fgColor-disabled) !important;
+    --button-invisible-borderColor-rest: transparent !important;
+    --button-invisible-borderColor-hover: transparent !important;
+    --button-invisible-borderColor-active: transparent !important;
+    --button-invisible-borderColor-disabled: transparent !important;
+    --button-invisible-iconColor-rest: var(--fgColor-muted) !important;
+    --button-invisible-iconColor-hover: var(--fgColor-default) !important;
+    --button-invisible-iconColor-disabled: var(--fgColor-disabled) !important;
+    --buttonCounter-default-bgColor-rest: #3c3836 !important;
+    --buttonCounter-default-bgColor-hover: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-default-bgColor-disabled: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-default-fgColor-rest: var(--fgColor-default) !important;
+    --buttonCounter-default-fgColor-hover: var(--fgColor-default) !important;
+    --buttonCounter-default-fgColor-disabled: var(--fgColor-disabled) !important;
+    --buttonCounter-outline-bgColor-rest: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-outline-bgColor-hover: var(--bgColor-accent-emphasis) !important;
+    --buttonCounter-outline-bgColor-disabled: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-outline-fgColor-rest: #d3869b !important;
+    --buttonCounter-outline-fgColor-hover: var(--fgColor-onEmphasis) !important;
+    --buttonCounter-outline-fgColor-disabled: var(--fgColor-disabled) !important;
+    --buttonCounter-danger-bgColor-rest: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-danger-bgColor-hover: var(--bgColor-danger-emphasis) !important;
+    --buttonCounter-danger-bgColor-disabled: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-danger-fgColor-rest: var(--fgColor-danger) !important;
+    --buttonCounter-danger-fgColor-hover: var(--fgColor-onEmphasis) !important;
+    --buttonCounter-danger-fgColor-disabled: var(--fgColor-disabled) !important;
+    --buttonCounter-primary-bgColor-rest: #d3869b33 !important;
+    --buttonCounter-primary-fgColor-rest: var(--fgColor-onEmphasis) !important;
+    --buttonCounter-invisible-bgColor-rest: var(--bgColor-neutral-muted) !important;
+    --buttonCounter-invisible-fgColor-rest: var(--fgColor-default) !important;
+    --control-bgColor-rest: #282828 !important;
+    --control-bgColor-hover: #3c3836 !important;
+    --control-bgColor-active: #3c3836 !important;
+    --control-bgColor-disabled: #282828 !important;
+    --control-borderColor-rest: #3c3836 !important;
+    --control-borderColor-active: var(--control-borderColor-rest) !important;
+    --control-borderColor-disabled: #3c3836 !important;
+    --control-borderColor-emphasis: #7c6f64 !important;
+    --control-borderColor-hover: var(--control-borderColor-rest) !important;
+    --control-fgColor-rest: var(--fgColor-default) !important;
+    --control-fgColor-disabled: var(--fgColor-disabled) !important;
+    --control-fgColor-placeholder: var(--fgColor-muted) !important;
+    --control-iconColor-rest: var(--fgColor-muted) !important;
+    --control-checked-bgColor-rest: #d3869b !important;
+    --control-checked-bgColor-hover: #d3869b !important;
+    --control-checked-bgColor-active: var(--bgColor-accent-emphasis) !important;
+    --control-checked-bgColor-disabled: #3c3836 !important;
+    --control-checked-borderColor-rest: #d3869b !important;
+    --control-checked-borderColor-hover: var(--borderColor-accent-emphasis) !important;
+    --control-checked-borderColor-active: var(--borderColor-accent-emphasis) !important;
+    --control-checked-borderColor-disabled: var(--control-bgColor-disabled) !important;
+    --control-checked-fgColor-rest: #ebdbb2 !important;
+    --control-checked-fgColor-disabled: #282828 !important;
+    --control-danger-bgColor-active: var(--bgColor-danger-emphasis) !important;
+    --control-danger-bgColor-hover: var(--bgColor-danger-emphasis) !important;
+    --control-danger-fgColor-hover: var(--fgColor-onEmphasis) !important;
+    --control-danger-fgColor-rest: var(--fgColor-danger) !important;
+    --control-borderColor-success: var(--borderColor-success-emphasis) !important;
+    --progressBar-bgColor-success: var(--bgColor-success-emphasis) !important;
+    --control-transparent-bgColor-rest: transparent !important;
+    --control-transparent-bgColor-hover: #3c3836 !important;
+    --control-transparent-bgColor-active: #50494540 !important;
+    --control-transparent-bgColor-disabled: var(--bgColor-disabled) !important;
+    --control-transparent-bgColor-selected: #50494533 !important;
+    --control-transparent-borderColor-rest: transparent !important;
+    --control-transparent-borderColor-hover: transparent !important;
+    --control-transparent-borderColor-active: transparent !important;
+    --header-bgColor: #282828 !important;
+    --header-fgColor-default: #ebdbb2 !important;
+    --header-fgColor-logo: #ebdbb2 !important;
+    --header-borderColor-divider: #3c3836 !important;
+    --headerSearch-bgColor: #1d2021 !important;
+    --headerSearch-borderColor: #3c3836 !important;
+    --avatar-bgColor: transparent !important;
+    --avatar-borderColor: transparent !important;
+    --avatar-shadow: 0px 0px 0px 2px #282828 !important;
+    --avatarStack-fade-bgColor-default: #3c3836 !important;
+    --avatarStack-fade-bgColor-muted: #3c3836 !important;
+    --overlay-bgColor: #282828 !important;
+    --overlay-borderColor: #3c3836 !important;
+    --overlay-backdrop-bgColor: rgb(0 0 0 / 60%) !important;
+    --overlay-shadow: 0px 0px 0px 1px #3c3836, 0px 16px 32px -4px #00000066, 0px 12px 56px -8px #00000066, 0px 40px 80px -16px #00000066 !important;
+    --contribution-default-bgColor-0: #3c3836 !important;
+    --contribution-default-bgColor-1: #d3869b57 !important;
+    --contribution-default-bgColor-2: #d3869b9c !important;
+    --contribution-default-bgColor-3: #d3869bd4 !important;
+    --contribution-default-bgColor-4: #d3869b !important;
+    --contribution-default-borderColor-0: transparent !important;
+    --contribution-default-borderColor-1: transparent !important;
+    --contribution-default-borderColor-2: transparent !important;
+    --contribution-default-borderColor-3: transparent !important;
+    --contribution-default-borderColor-4: transparent !important;
+    --contribution-halloween-bgColor-1: #631c03 !important;
+    --contribution-halloween-bgColor-2: #d65d0e !important;
+    --contribution-halloween-bgColor-3: #fe8019 !important;
+    --contribution-halloween-bgColor-4: #fabd2f !important;
+    --contribution-winter-bgColor-1: #0a3069 !important;
+    --contribution-winter-bgColor-2: #1f6feb !important;
+    --contribution-winter-bgColor-3: #58a6ff !important;
+    --contribution-winter-bgColor-4: #b6e3ff !important;
+    --underlineNav-borderColor-active: #d3869b !important;
+    --underlineNav-borderColor-hover: var(--borderColor-neutral-muted) !important;
+    --underlineNav-iconColor-rest: var(--fgColor-muted) !important;
+    --focus-outlineColor: #d3869b !important;
+    --page-header-bgColor: #282828 !important;
+    --card-bgColor: var(--bgColor-muted) !important;
+    --codeMirror-bgColor: var(--bgColor-default) !important;
+    --codeMirror-fgColor: var(--fgColor-default) !important;
+    --codeMirror-gutters-bgColor: var(--bgColor-default) !important;
+    --codeMirror-gutterMarker-fgColor-default: var(--bgColor-default) !important;
+    --codeMirror-gutterMarker-fgColor-muted: var(--fgColor-muted) !important;
+    --codeMirror-lineNumber-fgColor: var(--fgColor-muted) !important;
+    --codeMirror-cursor-fgColor: var(--fgColor-default) !important;
+    --codeMirror-selection-bgColor: var(--bgColor-accent-muted) !important;
+    --codeMirror-activeline-bgColor: var(--bgColor-neutral-muted) !important;
+    --codeMirror-matchingBracket-fgColor: var(--fgColor-default) !important;
+    --codeMirror-lines-bgColor: var(--bgColor-default) !important;
+    --codeMirror-syntax-fgColor-comment: var(--fgColor-muted) !important;
+    --codeMirror-syntax-fgColor-constant: var(--fgColor-done) !important;
+    --codeMirror-syntax-fgColor-entity: var(--fgColor-done) !important;
+    --codeMirror-syntax-fgColor-keyword: var(--fgColor-danger) !important;
+    --codeMirror-syntax-fgColor-storage: var(--fgColor-danger) !important;
+    --codeMirror-syntax-fgColor-string: var(--fgColor-success) !important;
+    --codeMirror-syntax-fgColor-support: var(--fgColor-done) !important;
+    --codeMirror-syntax-fgColor-variable: var(--fgColor-severe) !important;
+    --counter-bgColor-emphasis: var(--bgColor-neutral-emphasis) !important;
+    --counter-bgColor-muted: var(--bgColor-neutral-muted) !important;
+    --counter-borderColor: transparent !important;
+    --counter-fgColor-emphasis: var(--fgColor-onEmphasis) !important;
+    --counter-fgColor-muted: var(--fgColor-default) !important;
+    --dashboard-bgColor: var(--bgColor-inset) !important;
+    --diffBlob-addition-bgColor-line: #b8bb2626 !important;
+    --diffBlob-addition-bgColor-num: #b8bb2666 !important;
+    --diffBlob-addition-bgColor-word: #b8bb2666 !important;
+    --diffBlob-addition-fgColor-line: var(--fgColor-default) !important;
+    --diffBlob-addition-fgColor-num: var(--fgColor-default) !important;
+    --diffBlob-deletion-bgColor-line: #fb493426 !important;
+    --diffBlob-deletion-bgColor-num: #fb493466 !important;
+    --diffBlob-deletion-bgColor-word: #fb493466 !important;
+    --diffBlob-deletion-fgColor-line: var(--fgColor-default) !important;
+    --diffBlob-deletion-fgColor-num: var(--fgColor-default) !important;
+    --diffBlob-empty-bgColor-line: var(--bgColor-muted) !important;
+    --diffBlob-expander-iconColor: var(--fgColor-muted) !important;
+    --diffBlob-hunk-bgColor-num: #83a59866 !important;
+    --diffBlob-hunk-fgColor-num: var(--fgColor-default) !important;
+    --diffBlob-selectedLine-bgColor: #d7992126 !important;
+    --diffBlob-selectedLine-borderColor: #d79921 !important;
+    --diffBlob-selectedLine-fgColor: var(--fgColor-default) !important;
+    --menu-bgColor-active: var(--bgColor-muted) !important;
+    --selectMenu-bgColor: #3c3836 !important;
+    --selectMenu-borderColor: var(--borderColor-muted) !important;
+    --tooltip-bgColor: #3c3836 !important;
+    --tooltip-fgColor: #ebdbb2 !important;
+    --timelineBadge-bgColor: #3c3836 !important;
+    --topicTag-bgColor: #d3869b26 !important;
+    --topicTag-borderColor: transparent !important;
+    --treeView-directory-fill: var(--fgColor-muted) !important;
+    --reactionButton-bgColor-rest: var(--bgColor-transparent) !important;
+    --reactionButton-bgColor-hover: var(--bgColor-neutral-muted) !important;
+    --reactionButton-selected-bgColor-rest: var(--bgColor-accent-muted) !important;
+    --reactionButton-selected-bgColor-hover: var(--bgColor-accent-muted) !important;
+    --reactionButton-selected-fgColor-rest: var(--fgColor-link) !important;
+    --reactionButton-selected-fgColor-hover: var(--fgColor-link) !important;
+    --skeletonLoader-bgColor: #3c383633 !important;
+    --color-ansi-black: #3c3836 !important;
+    --color-ansi-black-bright: #928374 !important;
+    --color-ansi-white: #ebdbb2 !important;
+    --color-ansi-white-bright: #fbf1c7 !important;
+    --color-ansi-red: #fb4934 !important;
+    --color-ansi-red-bright: #fe8019 !important;
+    --color-ansi-green: #b8bb26 !important;
+    --color-ansi-green-bright: #8ec07c !important;
+    --color-ansi-yellow: #fabd2f !important;
+    --color-ansi-yellow-bright: #d79921 !important;
+    --color-ansi-blue: #83a598 !important;
+    --color-ansi-blue-bright: #458588 !important;
+    --color-ansi-magenta: #d3869b !important;
+    --color-ansi-magenta-bright: #b16286 !important;
+    --color-ansi-cyan: #8ec07c !important;
+    --color-ansi-cyan-bright: #689d6a !important;
+    --color-notifications-row-bg: #282828 !important;
+    --color-notifications-row-read-bg: #282828 !important;
+    --color-workflow-card-bg: #282828 !important;
+    --color-workflow-card-header-shadow: none !important;
+    --color-bg-discussions-row-emoji-box: #3c3836 !important;
+    --color-diff-blob-selected-line-highlight-mix-blend-mode: screen !important;
+    --color-marketing-icon-primary: #928374 !important;
+    --color-marketing-icon-secondary: #3c3836 !important;
+    --color-mktg-btn-shadow-outline: none !important;
+    --color-project-gradient-in: #282828 !important;
+    --color-project-gradient-out: #1d2021 !important;
+    --color-project-header-bg: #282828 !important;
+    --color-project-sidebar-bg: #1d2021 !important;
+    --color-text-white: #ebdbb2 !important;
+    --color-user-mention-fg: #ebdbb2 !important;
+    --display-auburn-bgColor-emphasis: #87534b !important;
+    --display-auburn-bgColor-muted: #271817 !important;
+    --display-auburn-borderColor-emphasis: #87534b !important;
+    --display-auburn-borderColor-muted: #432422 !important;
+    --display-auburn-fgColor: #bf9b94 !important;
+    --display-blue-bgColor-emphasis: #458588 !important;
+    --display-blue-bgColor-muted: #051d4d !important;
+    --display-blue-borderColor-emphasis: #458588 !important;
+    --display-blue-borderColor-muted: #0c2d6b !important;
+    --display-blue-fgColor: #83a598 !important;
+    --display-brown-bgColor-emphasis: #7b6530 !important;
+    --display-brown-bgColor-muted: #241c0e !important;
+    --display-brown-borderColor-emphasis: #7b6530 !important;
+    --display-brown-borderColor-muted: #3d2e12 !important;
+    --display-brown-fgColor: #b5956b !important;
+    --display-coral-bgColor-emphasis: #cc241d !important;
+    --display-coral-bgColor-muted: #351008 !important;
+    --display-coral-borderColor-emphasis: #cc241d !important;
+    --display-coral-borderColor-muted: #5d1604 !important;
+    --display-coral-fgColor: #fb4934 !important;
+    --display-cyan-bgColor-emphasis: #689d6a !important;
+    --display-cyan-bgColor-muted: #061e20 !important;
+    --display-cyan-borderColor-emphasis: #689d6a !important;
+    --display-cyan-borderColor-muted: #07383b !important;
+    --display-cyan-fgColor: #8ec07c !important;
+    --display-gray-bgColor-emphasis: #928374 !important;
+    --display-gray-bgColor-muted: #1c1f24 !important;
+    --display-gray-borderColor-emphasis: #928374 !important;
+    --display-gray-borderColor-muted: #33383f !important;
+    --display-gray-fgColor: #a89984 !important;
+    --display-green-bgColor-emphasis: #98971a !important;
+    --display-green-bgColor-muted: #1c1433 !important;
+    --display-green-borderColor-emphasis: #98971a !important;
+    --display-green-borderColor-muted: #352160 !important;
+    --display-green-fgColor: #b8bb26 !important;
+    --display-indigo-bgColor-emphasis: #458588 !important;
+    --display-indigo-bgColor-muted: #1b183f !important;
+    --display-indigo-borderColor-emphasis: #458588 !important;
+    --display-indigo-borderColor-muted: #312a62 !important;
+    --display-indigo-fgColor: #83a598 !important;
+    --display-lemon-bgColor-emphasis: #d79921 !important;
+    --display-lemon-bgColor-muted: #221f07 !important;
+    --display-lemon-borderColor-emphasis: #d79921 !important;
+    --display-lemon-borderColor-muted: #39340e !important;
+    --display-lemon-fgColor: #fabd2f !important;
+    --display-lime-bgColor-emphasis: #98971a !important;
+    --display-lime-bgColor-muted: #111f0d !important;
+    --display-lime-borderColor-emphasis: #98971a !important;
+    --display-lime-borderColor-muted: #223616 !important;
+    --display-lime-fgColor: #b8bb26 !important;
+    --display-olive-bgColor-emphasis: #98971a !important;
+    --display-olive-bgColor-muted: #171b0e !important;
+    --display-olive-borderColor-emphasis: #98971a !important;
+    --display-olive-borderColor-muted: #2e3416 !important;
+    --display-olive-fgColor: #b8bb26 !important;
+    --display-orange-bgColor-emphasis: #d65d0e !important;
+    --display-orange-bgColor-muted: #311708 !important;
+    --display-orange-borderColor-emphasis: #d65d0e !important;
+    --display-orange-borderColor-muted: #4a220d !important;
+    --display-orange-fgColor: #fe8019 !important;
+    --display-pine-bgColor-emphasis: #689d6a !important;
+    --display-pine-bgColor-muted: #071d12 !important;
+    --display-pine-borderColor-emphasis: #689d6a !important;
+    --display-pine-borderColor-muted: #0b3923 !important;
+    --display-pine-fgColor: #8ec07c !important;
+    --display-pink-bgColor-emphasis: #b16286 !important;
+    --display-pink-bgColor-muted: #2d1524 !important;
+    --display-pink-borderColor-emphasis: #b16286 !important;
+    --display-pink-borderColor-muted: #52203a !important;
+    --display-pink-fgColor: #d3869b !important;
+    --display-plum-bgColor-emphasis: #b16286 !important;
+    --display-plum-bgColor-muted: #241330 !important;
+    --display-plum-borderColor-emphasis: #b16286 !important;
+    --display-plum-borderColor-muted: #42245d !important;
+    --display-plum-fgColor: #d3869b !important;
+    --display-purple-bgColor-emphasis: #b16286 !important;
+    --display-purple-bgColor-muted: #1c1433 !important;
+    --display-purple-borderColor-emphasis: #b16286 !important;
+    --display-purple-borderColor-muted: #352160 !important;
+    --display-purple-fgColor: #d3869b !important;
+    --display-red-bgColor-emphasis: #cc241d !important;
+    --display-red-bgColor-muted: #300c0d !important;
+    --display-red-borderColor-emphasis: #cc241d !important;
+    --display-red-borderColor-muted: #5a1316 !important;
+    --display-red-fgColor: #fb4934 !important;
+    --display-teal-bgColor-emphasis: #689d6a !important;
+    --display-teal-bgColor-muted: #091d1a !important;
+    --display-teal-borderColor-emphasis: #689d6a !important;
+    --display-teal-borderColor-muted: #0c3b31 !important;
+    --display-teal-fgColor: #8ec07c !important;
+    --display-yellow-bgColor-emphasis: #d79921 !important;
+    --display-yellow-bgColor-muted: #261c01 !important;
+    --display-yellow-borderColor-emphasis: #d79921 !important;
+    --display-yellow-borderColor-muted: #3b2300 !important;
+    --display-yellow-fgColor: #fabd2f !important;
+    --rgh-heat-color: #d3869b !important;
+  }
+
+  .AppHeader,
+  .GlobalNav {
+    --AppHeader-bg: #282828 !important;
+  }
+
+  .cls-1,
+  .cls-2 {
+    fill: #d3869b !important;
+    stroke: #282828 !important;
+  }
+
+  ::selection {
+    background: var(--accent-main) !important;
+    opacity: 1;
+  }
+
+  dialog::backdrop {
+    background-color: var(--drawer-background-fade) !important;
+  }
+
+  .AppHeader-button--hasIndicator::before {
+    background: var(--accent-main) !important;
+  }
+
+  .js-highlight-blob {
+    fill: var(--contribution-default-bgColor-2);
+    stroke: var(--contribution-default-bgColor-2);
+  }
+
+  .turbo-progress-bar {
+    background: #d3869b !important;
+  }
+
+  .AppHeader,
+  .GlobalNav,
+  .UnderlineNav {
+    box-shadow: none !important;
+  }
+
+  .subnav-item.selected {
+    color: var(--accent-secondary) !important;
+    background-color: var(--accent-transparent) !important;
+  }
+
+  .filter-item.selected {
+    border: none !important;
+    color: var(--accent-main) !important;
+    background-color: var(--accent-transparent) !important;
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--accent-main);
+  }
+
+  .achievement-badge-sidebar {
+    opacity: .8 !important;
+  }
+
+  .octicon-calendar,
+  .octicon-stopwatch,
+  rect[style*='#gradient-'],
+  .hx_color-icon-directory {
+    fill: var(--accent-main);
+  }
+
+  a,
+  .btn {
+    text-decoration: none !important;
+    color: var(--accent-main);
+  }
+
+  .btn:disabled:hover,
+  .btn[aria-disabled="true"] {
+    text-decoration: none !important;
+    color: var(--accent-disabled);
+  }
+
+  .Details-content--shown,
+  .Box-row {
+    box-shadow: none !important;
+    border-color: var(--borderColor-default);
+  }
+}
