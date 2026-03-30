@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name           Gruvbox Dark Medium - Gruvhub Dark
+@name           Gruvbox Dark - Gruvhub Dark
 @namespace      https://github.com/migueltfd/gruvhub-dark
 @version        1.0.0
-@description    Modified Gruvbox Dark Medium Theme for GitHub
+@description    Modified Gruvbox Dark Theme for GitHub
 @author         Mikl Wolfe (original), MiguelTFD (modifications)
 @license        MIT
 @homepageURL    https://github.com/migueltfd/gruvhub-dark
@@ -21,7 +21,7 @@ Copyright (c) 2026 MiguelTFD
 */
 
 /*
-  Gruvbox Dark Medium palette reference:
+  Gruvbox Dark palette reference:
   bg0:       #282828  (main background)
   bg1:       #3c3836  (muted/inset background)
   bg2:       #504945  (emphasis background)
@@ -601,5 +601,9 @@ Copyright (c) 2026 MiguelTFD
   .Box-row {
     box-shadow: none !important;
     border-color: var(--borderColor-default);
+  }
+  
+  .Box {
+    background-color: #1d2021;
   }
 }
