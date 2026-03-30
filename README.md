@@ -1,2 +1,2 @@
 # gruvhub-dark
-Modified Gruvbox Dark Medium Theme for GitHub
+Modified Gruvbox Dark Theme for GitHub
